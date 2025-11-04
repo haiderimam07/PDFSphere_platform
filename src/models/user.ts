@@ -4,14 +4,15 @@ interface IUser extends Document {
   name: string;
   email: string;
   password?: string;
-  id: string;
+  _id:mongoose.Types.ObjectId;
   fullname?:string;
   isVerified?:boolean;
   avatar?:string;
   college?:string;
   branch?:string;
   uploadedFiles:Schema.Types.ObjectId[];
-
+  createdAt?:Date;
+  updatedAt?:Date;
 }
 
 const UserSchema: Schema<IUser> = new mongoose.Schema({

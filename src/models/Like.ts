@@ -4,7 +4,9 @@ import mongoose, { Document, Model, Schema } from 'mongoose';
 export interface ILike extends Document {
   file: Schema.Types.ObjectId;
   likedBy: Schema.Types.ObjectId;
-  id:string;
+  _id:mongoose.Types.ObjectId;
+  createdAt?:Date;
+  updatedAt?:Date;
 }
 
 const likeSchema = new Schema<ILike>({

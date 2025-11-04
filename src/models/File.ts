@@ -6,11 +6,13 @@ export interface IFile extends Document {
   thumbnail?: string;
   owner: Schema.Types.ObjectId;
   title: string;
-  id:string;
+  _id:mongoose.Types.ObjectId;
   subjectName?: string;
   subjectCode?: string;
   collegeTag?: string;
   isPublished: boolean;
+  createdAt?:Date;
+  updatedAt?:Date;
 }
 
 const fileSchema = new Schema<IFile>({
