@@ -18,6 +18,7 @@ const Home = async () => {
       <h1 className="text-5xl font-extrabold">Welcome to Our Website</h1>
       <p className="mt-4 text-lg">
         This is the dashboard page
+        check this out
       </p>
     </div>
   );
